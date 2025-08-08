@@ -1,0 +1,60 @@
+import React from 'react';
+import { MapPin, Users, Clock } from 'lucide-react';
+
+interface HeroSectionProps {
+  lastUpdated: string;
+}
+
+export default function HeroSection({ lastUpdated }: HeroSectionProps) {
+  return (
+    <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+      <div className="max-w-6xl mx-auto px-4 py-16 md:py-24">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Welcome to<br />
+            <span className="text-blue-200">SocioHelper Community</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
+            Your central hub for community announcements, local events, and neighborhood connections
+          </p>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="flex items-center justify-center mb-3">
+                <MapPin className="w-8 h-8 text-blue-200" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Prime Location</h3>
+              <p className="text-blue-100 text-sm">Located in the heart of the city with easy access to all amenities</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="flex items-center justify-center mb-3">
+                <Users className="w-8 h-8 text-blue-200" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Strong Community</h3>
+              <p className="text-blue-100 text-sm">Over 200 families living together in harmony and friendship</p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <div className="flex items-center justify-center mb-3">
+                <Clock className="w-8 h-8 text-blue-200" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Always Updated</h3>
+              <p className="text-blue-100 text-sm">Last updated: {lastUpdated}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Wave separator */}
+      <div className="relative">
+        <svg className="w-full h-12 md:h-16" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor"></path>
+          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor"></path>
+          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>
+        </svg>
+      </div>
+    </section>
+  );
+}
