@@ -1,4 +1,4 @@
-# 🏘️ CommuniChamp - Community Notice Board
+# 🏘️ SocioHelper - Community Notice Board
 
 A modern, mobile-friendly community notice board website designed for residential societies and local communities. Built with React, TypeScript, and Tailwind CSS.
 
